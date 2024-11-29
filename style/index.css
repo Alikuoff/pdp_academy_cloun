@@ -1129,3 +1129,81 @@ z-index: 2;
         flex-direction: column;
     }
 }
+
+/* General responsive styles */
+.container, .container1 {
+    width: 100%;
+    max-width: 1200px; /* Adjust as necessary */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .section-title {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .footer-top {
+        flex-direction: column; /* Stack footer items */
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column; /* Stack footer links */
+        align-items: center;
+    }
+}
+
+/* Add this CSS for the hamburger button */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    z-index: 1002; /* Above the navbar */
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column; 
+        width: 100%;
+        
+        background-color: rgba(255, 255, 255, 0.9);
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        z-index: 1000; 
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+}
